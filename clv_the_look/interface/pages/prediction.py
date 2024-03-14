@@ -30,8 +30,12 @@ def main():
         response = requests.post(url, files={'file' : df_new})
 
         # Display predictions
-        st.write("Predictions:")
-        st.subheader(response.json()['Prediction'])
+        # Display predictions
+        st.write("Prediction...")
+        prediction = response.json()['Prediction']
+        st.markdown(f"<h2 style='color:#ff5733;'>{prediction}</h2>", unsafe_allow_html=True)
+     
+ 
 
         # # Plot CLV distribution
         # st.write("CLV Distribution Plot:")
