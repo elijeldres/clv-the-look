@@ -34,10 +34,9 @@ def main():
         st.write("Prediction...")
         prediction = response.json()['Prediction']
         if prediction == "This customer should purchase with us again":
-            st.markdown(f"<h2 style='color:#32CD32;'>{prediction}</h2>", unsafe_allow_html=True)
+            st.markdown(f"<h2 style='color:#32CD32;'>Good news! 😃 This customer should purchase with us again!</h2>", unsafe_allow_html=True)
         else:
-            st.markdown(f"<h2 style='color:#ff5733;'>{prediction}</h2>", unsafe_allow_html=True)
-     
+            st.markdown(f"<h2 style='color:#ff5733;'>More effort needed! 😔 This customer is currently unlikely to purchase with us again...</h2>", unsafe_allow_html=True)
  
 
         # # Plot CLV distribution
